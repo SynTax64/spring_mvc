@@ -18,11 +18,18 @@
 		Country: <form:select path="country">
 			<form:options items="${countryOptions}" />
 		</form:select>
-
 		<br>
 		<br>
 		Favorite Language:
-		<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"  />
+		<form:radiobuttons path="favoriteLanguage"
+			items="${student.favoriteLanguageOptions}" />
+		<br>
+		<br>
+		Operating Systems:
+		Linux <form:checkbox path="operatingSystems" value="Linux"/>
+		Windows <form:checkbox path="operatingSystems" value="Mac OS"/>
+		MacOS <form:checkbox path="operatingSystems" value="MS Windows"/>
+		
 		<br>
 		<br>
 		<input type="submit" value="Submit">

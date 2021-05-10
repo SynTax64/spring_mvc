@@ -1,5 +1,6 @@
 package springdemo.mvc;
 
+import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -24,11 +25,12 @@ public class StudentController {
 		return "student-form";
 	}
 
-	@RequestMapping("processForm")
+	@RequestMapping("/processForm")
 	public String processForm(@ModelAttribute("student") Student student) {
 
-		System.out.println("student: " + student.getFirstName() + " " + student.getLastName() + ", "
-				+ student.getCountry() + ", " + student.getFavoriteLanguage());
+		System.out.println(
+				"student: " + student.getFirstName() + " " + student.getLastName() + ", " + student.getCountry() + ", "
+						+ student.getFavoriteLanguage() + ", " + Arrays.toString(student.getOperatingSystems()));
 
 		return "student-confirmation";
 	}
