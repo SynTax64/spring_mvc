@@ -16,12 +16,15 @@
 		<br>
 		<br>
 		Country: <form:select path="country">
-		<form:option value="Brasil" label="Brasil"></form:option>
-		<form:option value="France" label="France"></form:option>
-		<form:option value="Germany" label="Germany"></form:option>
-		<form:option value="India" label="India"></form:option>
-		
+			<form:options items="${countryOptions}" />
 		</form:select>
+
+		<br>
+		<br>
+		Favorite Language:
+		<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"  />
+		<br>
+		<br>
 		<input type="submit" value="Submit">
 	</form:form>
 </body>
